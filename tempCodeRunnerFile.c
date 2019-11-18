@@ -1,0 +1,1 @@
+char	*ft_strmapi(char *s, void (*f)(unsigned int, char))
