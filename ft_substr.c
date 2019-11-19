@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 18:15:58 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/18 20:56:37 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/19 19:03:43 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 	{
-		return (NULL);
+		return (ft_strdup(""));
 	}
 	while (len--)
 	{
