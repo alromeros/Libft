@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 21:49:13 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/19 20:55:05 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/20 10:36:14 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstlast(t_list *lst)
 	{
 		if (p->next == NULL)
 			return (p);
-		p++;
+		p = p->next;
 	}
 	return (p);
 }

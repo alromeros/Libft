@@ -6,14 +6,14 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 20:07:12 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/12 19:14:19 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/19 21:30:06 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+size_t	ft_strlcpy(char *dst, const char *src,
 size_t distsize)
 {
 	const char	*l;

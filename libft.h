@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:19:46 by cpalazon          #+#    #+#             */
-/*   Updated: 2019/11/19 20:30:02 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/20 11:08:15 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				*ft_calloc(size_t count, size_t size);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *src);
 char				*ft_itoa(int n);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_substr(char const *s, unsigned int start, size_t len);

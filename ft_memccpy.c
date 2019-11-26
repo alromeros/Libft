@@ -6,15 +6,15 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 19:21:15 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/13 18:00:05 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/19 21:29:27 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	*ft_memccpy(void *restrict dst,
-const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *dst,
+const void *src, int c, size_t n)
 {
 	unsigned char		*ptr;
 	const unsigned char *pstr;
