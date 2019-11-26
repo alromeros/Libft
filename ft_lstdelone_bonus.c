@@ -6,17 +6,18 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 21:55:24 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/19 21:31:40 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/26 11:19:17 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst);
-	free(lst);
-	lst = NULL;
-	return (lst);
+	if (lst)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }
