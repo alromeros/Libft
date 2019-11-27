@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:19:46 by cpalazon          #+#    #+#             */
-/*   Updated: 2019/11/26 11:38:20 by alromero         ###   ########.fr       */
+/*   Updated: 2019/11/26 17:03:07 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void				*ft_memset(void *b, int c, size_t len);
 size_t				ft_strlen(const char *s);
-void				*ft_bzero(void *s, size_t n);
+void				ft_bzero(void *s, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);

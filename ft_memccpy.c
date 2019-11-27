@@ -3,37 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agomez-o <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 19:21:15 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/19 21:29:27 by alromero         ###   ########.fr       */
+/*   Created: 2019/11/08 12:38:49 by agomez-o          #+#    #+#             */
+/*   Updated: 2019/11/20 13:37:00 by agomez-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memccpy(void *dst,
-const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char		*ptr;
-	const unsigned char *pstr;
-	size_t				count;
+	size_t			i;
+	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
 
-	ptr = (unsigned char *)dst;
-	pstr = (unsigned char *)src;
-	count = 0;
-	while (n > 0)
+	ptr_dst = (unsigned char*)dst;
+	ptr_src = (unsigned char*)src;
+	i = 0;
+	while (i < n)
 	{
-		count++;
-		*ptr = *pstr;
-		if (*ptr == (unsigned char)c && n != 0)
+		ptr_dst[i] = ptr_src[i];
+		if (ptr_dst[i] == (unsigned char)c)
 		{
-			return (&dst[count]);
+			return ((void*)(dst + i + 1));
 		}
-		ptr++;
-		pstr++;
-		n--;
+		i++;
 	}
 	return (NULL);
 }

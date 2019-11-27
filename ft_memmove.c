@@ -3,34 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agomez-o <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 20:06:58 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/13 19:20:52 by alromero         ###   ########.fr       */
+/*   Created: 2019/11/08 12:39:15 by agomez-o          #+#    #+#             */
+/*   Updated: 2019/11/20 13:44:06 by agomez-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
-	char		*str;
-	const char	*str2;
-	size_t		hola;
+	unsigned char		*p_str1;
+	unsigned const char	*p_str2;
 
-	hola = 0;
-	str = (char *)dst;
-	str2 = (char *)src;
-	if (dst == src || !len)
-		return (dst);
-	if (dst > src)
-	{
-		while (++hola <= len)
-			str[len - hola] = str2[len - hola];
-	}
-	else
-		while (len--)
-			*(str++) = *(str2++);
-	return (dst);
+	if (str1 < str2)
+		return (ft_memcpy(str1, str2, n));
+	p_str1 = (unsigned char*)str1;
+	p_str2 = (unsigned const char*)str2;
+	if (!n || str1 == str2)
+		return (str1);
+	while (n--)
+		p_str1[n] = p_str2[n];
+	return (str1);
 }

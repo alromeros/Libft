@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agomez-o <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 20:07:31 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/11 20:35:13 by alromero         ###   ########.fr       */
+/*   Created: 2019/11/08 12:49:00 by agomez-o          #+#    #+#             */
+/*   Updated: 2019/11/12 12:41:25 by agomez-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	else
-		return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

@@ -3,36 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agomez-o <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 20:07:09 by alromero          #+#    #+#             */
-/*   Updated: 2019/11/19 21:29:59 by alromero         ###   ########.fr       */
+/*   Created: 2019/11/06 13:48:26 by agomez-o          #+#    #+#             */
+/*   Updated: 2019/11/16 12:09:05 by agomez-o         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-size_t		ft_strlcat(char *dst,
-const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
+	size_t	londst;
+	size_t	lonsrc;
+	size_t	cont;
 
-	i = 0;
-	j = 0;
-	while (dst[i] != '\0' && i < dstsize)
-		i++;
-	if (dst[i] == '\0')
-	{
-		while (src[j] != '\0' && j + i < dstsize - 1)
-		{
-			dst[i + j] = src[j];
-			j++;
-		}
-		dst[i + j] = '\0';
-	}
-	while (src[j] != '\0')
-		j++;
-	return (i + j);
+	londst = ft_strlen(dst);
+	lonsrc = ft_strlen(src);
+	if (dstsize <= londst)
+		return (lonsrc + dstsize);
+	cont = londst;
+	while (*src != '\0' && cont < (dstsize - 1))
+		*(dst + cont++) = *src++;
+	*(dst + cont) = '\0';
+	return (londst + lonsrc);
 }
